@@ -1,2 +1,2 @@
 # Data-Structure-Algorithm
-Here I'm host DSA with C and Java both.
+Here I'm host source file of DSA with C.
