@@ -17,7 +17,7 @@ public InsertionArray(int sizeOfArray) {
 // Insert Method
 public void  Insert(int location,int valueToBeInserted) {
 	try {
-
+//-214748364
 		if (arr[location]==Integer.MIN_VALUE) {
 			arr[location]=valueToBeInserted;
 			System.out.println("Successfully Inserted");
@@ -31,16 +31,15 @@ public void  Insert(int location,int valueToBeInserted) {
 		System.out.println("Invalid Index to access Array");
 	}
 	
-}
-public static void main(String[] args) {
-	// TODO Auto-generated method stub
-	InsertionArray Ins =new InsertionArray(5);
-	Ins.Insert(0, 0);	//Successfully Inserted
-	Ins.Insert(1, 10); //Successfully Inserted
-	Ins.Insert(2, 20); //Successfully Inserted
-	Ins.Insert(1,30);   //index arr[1] Already occupied 
-	Ins.Insert(12, 120); //index out of bound becouse size of array is 5
-	System.out.println("Given Array:" +Ins.arr);
-
+  }
+public void traverseArray() {
+	try {
+		for(int i=0;i<arr.length;i++) {
+			System.out.println(arr[i] + " ");
+		}
+	}catch(Exception e) {
+		System.out.println("Array no longer exists");
+	}
+	
 }
 }
