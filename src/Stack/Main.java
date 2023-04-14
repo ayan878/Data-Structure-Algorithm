@@ -21,11 +21,13 @@ public class Main {
      System.out.println(pop1);//3
      
 //     peek
-     System.out.println("Peek:" +newStack.peek());
+     System.out.println("Peek:" +newStack.peek());//2 because top element is 2 after popping
      
     //to element of stack/array
      System.out.println(newStack.arr);
      
+     //Delete stack
+     newStack.deleteStack();
       
       }
 

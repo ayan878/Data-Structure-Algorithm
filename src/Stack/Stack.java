@@ -63,4 +63,8 @@ public class Stack {
 		   return arr[topOfStack];
 	   }
    }
+   public void deleteStack() {
+	   arr=null;
+	   System.out.println("Succesfully Deleted Stack");
+   }
 }
