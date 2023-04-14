@@ -20,8 +20,12 @@ public class Main {
      System.out.println(pop);//4
      System.out.println(pop1);//3
      
-    
+//     peek
+     System.out.println("Peek:" +newStack.peek());
+     
+    //to element of stack/array
      System.out.println(newStack.arr);
+     
       
       }
 
