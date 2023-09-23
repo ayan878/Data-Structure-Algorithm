@@ -19,5 +19,9 @@ public class Main {
 	
 	//Array transverse
 	Ins. traverseArray();
+	
+	//delete array value at index
+//	deleteArrayElement del = new deleteArrayElement();
+//	del.deleteValue(0);
 }
 }
