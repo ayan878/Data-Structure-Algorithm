@@ -17,15 +17,15 @@ private void missing() {
 		arr[i]=sc.nextInt();
 	}
 	System.out.println("Original Array:"+Arrays.toString(arr));
-	int sum1=((size+1)*(size+2))/2;// Sum of all numbers from 1 to n+1
+	int expectedSum=((size+1)*(size+2))/2;// Sum of all numbers from 1 to n+1
 
 //		This formula calculates the sum of all numbers from 1 to n+1, not from 1 to n.
 //		For example, if n is 5, the sum would be (6 * 7) / 2 = 21, which includes the next number after n.
-	int sum2=0;
+	int actualSum=0;
 	for (int i=0;i<size;i++) {
-		sum2+=arr[i];
+		actualSum+=arr[i];
 	}
-	System.out.println("Missing Number:"+(sum1-sum2));
+	System.out.println("Missing Number:"+(expectedSum-actualSum));
 
 }
 
