@@ -6,11 +6,12 @@ public class Main {
 		// TODO Auto-generated method stub
     SinglyLinkedList sll =new SinglyLinkedList();
     //single linked list
-   sll.createSinlyLiskedList(5);
+   sll.createSinglyLinkedList(5);
    System.out.println(sll.head.value);
    
    //insertion
-   sll.insertInLinkList(6, 1);
+        sll.insertInLinkList(6, 1);
+
    System.out.println(sll.head.next.value);
 	}
 }
