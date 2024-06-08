@@ -6,12 +6,23 @@ public class SinglyLinkedList {
 	public Node tail;
 	public int size;
 	
-	public Node createSinlyLiskedList(int nodeValue) {
+	public Node createSinglyLinkedList(int nodeValue) {
+//		creating a head node
 		head =new Node();
+
+//		creating a new node
 		Node node =new Node();
+
+//		Accesses the next field of the node object and assign with null;
 		node.next=null;
+
+//		Accesses the value field of the node object and assigned with nodeValue
 		node.value=nodeValue;
+
+//		The instance variable head now points to the newly created node. This sets the starting point of the singly linked list.
 		head=node;
+
+//		an instance variable tail in the class to hold the reference to the last node of the linked list and pointing to newly node
 		tail=node;
 		size=1; //in this case size of Singly LinkedList is 1
 		return head;
@@ -22,7 +33,7 @@ public class SinglyLinkedList {
 		Node node =new Node();
 		node.value=nodeValue;
 		if(head==null) {
-			createSinlyLiskedList(nodeValue);
+			createSinglyLinkedList(nodeValue);
 		}
 		else if (location==0) {
 			node.next=head;
