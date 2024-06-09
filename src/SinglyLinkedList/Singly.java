@@ -23,6 +23,10 @@ public class Singly {
         }
         System.out.println("null");
     }
+
+    public static void Insert() {
+
+    }
         public static void main (String[]args){
 
             Singly sll = new Singly();
@@ -32,16 +36,16 @@ public class Singly {
 //            The head field of the sll object is set to reference this new ListNode object.
 //            Now, sll.head points to the ListNode with the value 11
 
-            sll.head = new ListNode(11);
-            ListNode second = new ListNode(5);
-            ListNode third = new ListNode(3);
-            ListNode forth = new ListNode(7);
-
-//        connecting node
-            sll.head.next = second;
-            second.next = third;
-            third.next = forth;
-            forth.next = null;
+//            sll.head = new ListNode(11);
+//            ListNode second = new ListNode(5);
+//            ListNode third = new ListNode(3);
+//            ListNode forth = new ListNode(7);
+//
+////        connecting node
+//            sll.head.next = second;
+//            second.next = third;
+//            third.next = forth;
+//            forth.next = null;
 
             sll.traverse();
 
