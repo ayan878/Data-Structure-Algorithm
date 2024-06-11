@@ -19,13 +19,13 @@ public class CountingSort {
         for (int j = 0; j < A.length; j++) {
             C[A[j]]++;
         }
-        System.out.println(Arrays.toString(C));
+        System.out.println("Frequency of numbers:"+Arrays.toString(C));
 
         // Loop-3 No. of elements <= index of C
         for (int i = 1; i <= range; i++) {
             C[i] += C[i - 1];
         }
-        System.out.println(Arrays.toString(C));
+        System.out.println("Commulative Frequency:"+Arrays.toString(C));
 
         // Loop-4 for sorting the array
         for (int k = A.length - 1; k >= 0; k--) {
@@ -33,5 +33,13 @@ public class CountingSort {
             C[A[k]]--;
         }
         System.out.println(Arrays.toString(B));
+
+        int count=0;
+        for(int i=0;i<B.length;i++){
+            if(A[i]!=B[i]){
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
