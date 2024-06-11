@@ -1,3 +1,224 @@
+### README.md
+
+## Singly Linked List Implementations for Stack and Queue
+
+This project contains implementations of a singly linked list used to create stack and queue data structures in Java. Each implementation includes basic operations for managing the data structure.
+
+### ListNode Class
+The `ListNode` class is used by both the stack and queue implementations. It represents each node in the linked list.
+
+#### Definition
+```java
+class ListNode {
+    int data;
+    ListNode next;
+
+    // Constructor to initialize the node
+    ListNode(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+```
+
+### Stack Implementation
+The `Stack` class provides the functionality of a stack data structure using a singly linked list.
+
+#### Stack Operations
+
+1. **Push Operation**
+
+   **Pseudocode:**
+   ```
+   PUSH(data)
+       Create newNode with data
+       newNode.next = head
+       head = newNode
+   ```
+
+   **Code:**
+   ```java
+   public void push(int data) {
+       ListNode newNode = new ListNode(data);
+       newNode.next = head;
+       head = newNode;
+   }
+   ```
+
+2. **Pop Operation**
+
+   **Pseudocode:**
+   ```
+   POP()
+       IF head is null THEN
+           THROW exception ("Stack is empty")
+       END IF
+       data = head.data
+       head = head.next
+       RETURN data
+   ```
+
+   **Code:**
+   ```java
+   public int pop() {
+       if (head == null) {
+           throw new IllegalStateException("Stack is empty");
+       }
+       int data = head.data;
+       head = head.next;
+       return data;
+   }
+   ```
+
+3. **Display Operation**
+
+   **Pseudocode:**
+   ```
+   DISPLAY()
+       current = head
+       WHILE current is not null DO
+           PRINT current.data + " --> "
+           current = current.next
+       END WHILE
+       PRINT "null"
+   ```
+
+   **Code:**
+   ```java
+   public void display() {
+       ListNode current = head;
+       while (current != null) {
+           System.out.print(current.data + " --> ");
+           current = current.next;
+       }
+       System.out.println("null");
+   }
+   ```
+
+### Queue Implementation
+The `Queue` class provides the functionality of a queue data structure using a singly linked list.
+
+#### Queue Operations
+
+1. **Enqueue Operation**
+
+   **Pseudocode:**
+   ```
+   ENQUEUE(data)
+       Create newNode with data
+       IF tail is null THEN
+           head = tail = newNode
+       ELSE
+           tail.next = newNode
+           tail = newNode
+       END IF
+   ```
+
+   **Code:**
+   ```java
+   public void enqueue(int data) {
+       ListNode newNode = new ListNode(data);
+       if (tail == null) {
+           head = tail = newNode;
+       } else {
+           tail.next = newNode;
+           tail = newNode;
+       }
+   }
+   ```
+
+2. **Dequeue Operation**
+
+   **Pseudocode:**
+   ```
+   DEQUEUE()
+       IF head is null THEN
+           THROW exception ("Queue is empty")
+       END IF
+       data = head.data
+       head = head.next
+       IF head is null THEN
+           tail = null
+       END IF
+       RETURN data
+   ```
+
+   **Code:**
+   ```java
+   public int dequeue() {
+       if (head == null) {
+           throw new IllegalStateException("Queue is empty");
+       }
+       int data = head.data;
+       head = head.next;
+       if (head == null) {
+           tail = null;
+       }
+       return data;
+   }
+   ```
+
+3. **Display Operation**
+
+   **Pseudocode:**
+   ```
+   DISPLAY()
+       current = head
+       WHILE current is not null DO
+           PRINT current.data + " --> "
+           current = current.next
+       END WHILE
+       PRINT "null"
+   ```
+
+   **Code:**
+   ```java
+   public void display() {
+       ListNode current = head;
+       while (current != null) {
+           System.out.print(current.data + " --> ");
+           current = current.next;
+       }
+       System.out.println("null");
+   }
+   ```
+
+### How to Run
+To test the stack and queue implementations, you can run the main methods provided in each class. This will demonstrate the basic operations and their expected behavior.
+
+### Stack Example
+```java
+public static void main(String[] args) {
+    Stack stack = new Stack();
+
+    // Testing stack operations
+    System.out.println("Stack operations:");
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    stack.display(); // Should display 30 --> 20 --> 10 --> null
+    System.out.println("Popped: " + stack.pop()); // Should display 30
+    stack.display(); // Should display 20 --> 10 --> null
+}
+```
+
+### Queue Example
+```java
+public static void main(String[] args) {
+    Queue queue = new Queue();
+
+    // Testing queue operations
+    System.out.println("Queue operations:");
+    queue.enqueue(40);
+    queue.enqueue(50);
+    queue.enqueue(60);
+    queue.display(); // Should display 40 --> 50 --> 60 --> null
+    System.out.println("Dequeued: " + queue.dequeue()); // Should display 40
+    queue.display(); // Should display 50 --> 60 --> null
+}
+```
+
+
 Sure! Here's how we can represent the memory layout for your `SinglyLinkedList` class in Java. The code defines a singly linked list with a `Node` class, a `SinglyLinkedList` class to manage the list, and methods to create and insert nodes.
 
 ### Node Class Definition
