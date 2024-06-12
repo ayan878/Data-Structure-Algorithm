@@ -18,7 +18,6 @@ public class MaxElement {
 
         return max;
     }
-
     public static void main(String[] args) {
         int[] arr = {47, 2, 100, 101, 50};
         System.out.println(maxValue(arr));
