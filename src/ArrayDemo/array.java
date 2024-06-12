@@ -22,6 +22,7 @@ public class array {
             if (arr[i] == value) {
                 System.out.println("Element found at index " + i);
                 found = true;
+                break; // Once found, no need to continue the loop
             }
         }
 
@@ -66,36 +67,43 @@ public class array {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] arr = new int[6];
+        insert(arr);
+        display(arr);
+        search(arr);
+        display(arr);
+        deleteArray(arr);
+        display(arr);
 
-        while (true) {
-            System.out.println("\nArray Operations Menu:");
-            System.out.println("1. Insert elements");
-            System.out.println("2. Display array");
-            System.out.println("3. Search element");
-            System.out.println("4. Delete element");
-            System.out.println("5. Exit");
-            System.out.print("Choose an option: ");
-            int choice = scanner.nextInt();
 
-            switch (choice) {
-                case 1:
-                    insert(arr);
-                    break;
-                case 2:
-                    display(arr);
-                    break;
-                case 3:
-                    search(arr);
-                    break;
-                case 4:
-                    deleteArray(arr);
-                    break;
-                case 5:
-                    System.out.println("Exiting...");
-                    return;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
-        }
+//        while (true) {
+//            System.out.println("\nArray Operations Menu:");
+//            System.out.println("1. Insert elements");
+//            System.out.println("2. Display array");
+//            System.out.println("3. Search element");
+//            System.out.println("4. Delete element");
+//            System.out.println("5. Exit");
+//            System.out.print("Choose an option: ");
+//            int choice = scanner.nextInt();
+//
+//            switch (choice) {
+//                case 1:
+//                    insert(arr);
+//                    break;
+//                case 2:
+//                    display(arr);
+//                    break;
+//                case 3:
+//                    search(arr);
+//                    break;
+//                case 4:
+//                    deleteArray(arr);
+//                    break;
+//                case 5:
+//                    System.out.println("Exiting...");
+//                    return;
+//                default:
+//                    System.out.println("Invalid choice. Please try again.");
+//            }
+//        }
     }
 }
