@@ -1,4 +1,4 @@
-package CircularLinkedList;
+package CircularSinglyLinkedList;
 
 public class Node {
 
