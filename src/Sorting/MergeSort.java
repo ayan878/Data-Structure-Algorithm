@@ -3,7 +3,7 @@ package Sorting;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class mergeSort {
+public class MergeSort {
 
     public static void main(String[] args) {
         int[] arr = {12, 11, 13, 5, 6, 7};
@@ -35,7 +35,7 @@ public class mergeSort {
         int n2 = right - middle;
 
         // Create temporary arrays
-        int[] L = new int[n1 + 1]; // Include an extra slot for sentinel
+        int[] L = new int[n1 + 1]; // Include an extra s for sentinel
         int[] R = new int[n2 + 1]; // Include an extra slot for sentinel
 
         // Copy data to temporary arrays L[] and R[]
@@ -51,8 +51,8 @@ public class mergeSort {
         R[n2] = Integer.MAX_VALUE;
 
         // Merge the temporary arrays back into arr[left..right]
-        int i = 0, j = 0, k = left;
-        
+        int i = 0, j = 0, k = left; // k denotes main array index
+
         while (i < n1 && j < n2) {
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
@@ -63,7 +63,7 @@ public class mergeSort {
             }
             k++;
         }
-
+// it is possible one of the array greater
         // Copy remaining elements of L[] if any
         while (i < n1) {
             arr[k] = L[i];
