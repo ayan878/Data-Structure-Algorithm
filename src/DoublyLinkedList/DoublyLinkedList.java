@@ -6,6 +6,13 @@ public class DoublyLinkedList {
     Node tail;
     int size = 0;
 
+    // Node definition
+    public static class Node {
+        int value;
+        Node next;
+        Node prev;
+    }
+
     // Create a new doubly linked list with a single node
     public Node createDoublyLinkedList(int nodeValue) {
         Node newNode = new Node();
@@ -23,6 +30,7 @@ public class DoublyLinkedList {
     public void insertDoublyLinkedList(int nodeValue, int location) {
         Node newNode = new Node();
         newNode.value = nodeValue;
+
         if (head == null) {
             createDoublyLinkedList(nodeValue);
             return;
@@ -38,10 +46,8 @@ public class DoublyLinkedList {
             tail = newNode;
         } else {
             Node tempNode = head;
-            int index = 0;
-            while (index < location - 1) {
+            for (int index = 0; index < location - 1; index++) {
                 tempNode = tempNode.next;
-                index++;
             }
             newNode.prev = tempNode;
             newNode.next = tempNode.next;
@@ -50,7 +56,6 @@ public class DoublyLinkedList {
         }
         size++;
     }
-
 
     // Traverse the list from head to tail
     public void traverse() {
@@ -81,10 +86,11 @@ public class DoublyLinkedList {
         }
         System.out.println("null");
     }
+
+    // Search for a node by value
     public void searching(int nodeValue) {
         Node tempNode = head;
         int index = 0;
-        boolean found = false;  // Flag to check if the node is found
 
         if (head == null) {
             System.out.println("Doubly LinkedList is empty");
@@ -94,17 +100,52 @@ public class DoublyLinkedList {
         while (tempNode != null) {
             if (tempNode.value == nodeValue) {
                 System.out.println(nodeValue + " is at index " + index);
-                found = true;  // Set the flag to true
-                break;  // Exit the loop once the node is found
+                return;
             }
             tempNode = tempNode.next;
             index++;
         }
 
-        if (!found) {
-            System.out.println(nodeValue + " is not found in the list.");
-        }
+        System.out.println(nodeValue + " is not found in the list.");
     }
 
+    // Delete a node at a specified location
+    public void delete(int location) {
+        if (head == null || location < 0 || location >= size) {
+            System.out.println("Invalid location");
+            return;
+        }
 
+        if (location == 0) {
+            head = head.next;
+            if (head != null) {
+                head.prev = null;
+            }
+            if (size == 1) {
+                tail = null;
+            }
+        } else if (location == size - 1) {
+            tail = tail.prev;
+            if (tail != null) {
+                tail.next = null;
+            }
+        } else {
+            Node currentNode = head;
+            for (int index = 0; index < location-1; index++) {
+                currentNode = currentNode.next;
+            }
+            currentNode.next = currentNode.next.next;
+            currentNode.next.prev = currentNode;
+
+        }
+        size--;
+        if (size == 0) {
+            head = null;
+            tail = null;
+        }
+    }
+    public void DeleteEntireList(){
+        head=null;
+        tail=null;
+    }
 }

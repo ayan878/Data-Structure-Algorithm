@@ -19,5 +19,11 @@ public class Main {
         dll.traverse();
         dll.reverse();
         dll.searching(4);
+        dll.delete(0);
+        dll.traverse();
+        dll.searching(4);
+        dll.DeleteEntireList();
+        dll.traverse();
     }
+
 }
