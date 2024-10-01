@@ -21,7 +21,7 @@ public class Main {
         g.addUndirected(0, 3);
         g.addUndirected(1, 4);
         g.addUndirected(2, 3);
-        g.addUndirected(4, 3);
+        g.addUndirected(3, 4);
 
         // Print the graph
         System.out.println(g.toString());
