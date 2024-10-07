@@ -13,6 +13,7 @@ public class Main {
         nodeList.add(new GraphNode("D", 3));
         nodeList.add(new GraphNode("E", 4));
 
+
         Graph g= new Graph(nodeList);
 
         g.addUndirectedEdge(0,1);

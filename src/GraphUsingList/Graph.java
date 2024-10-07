@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Graph {
 
-    ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
+    ArrayList<GraphNode> nodeList;
 
     public Graph(ArrayList<GraphNode> nodeList) {
         this.nodeList = nodeList;
