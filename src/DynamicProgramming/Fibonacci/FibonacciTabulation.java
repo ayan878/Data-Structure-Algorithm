@@ -1,6 +1,6 @@
 package DynamicProgramming.Fibonacci;
 
-public class FibonacciDPArray {
+public class FibonacciTabulation {
 
     public static int fib(int n){
         if(n==0 ||n==1){
