@@ -1,6 +1,6 @@
 package DynamicProgramming.Fibonacci;
 
-public class FibonacciDP {
+public class FibonacciIterative {
     public static void main(String[] args) {
         int n=6;
         int first=0;
@@ -14,3 +14,6 @@ public class FibonacciDP {
         System.out.println(sumOfFib);
     }
 }
+
+//TC:0(n);
+//SC:O(n)
